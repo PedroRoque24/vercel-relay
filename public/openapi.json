@@ -1,0 +1,46 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Lex Relay API",
+    "version": "1.0.0",
+    "description": "API for sending commands to Lex via a relay."
+  },
+  "servers": [
+    {
+      "url": "https://vercel-relay-six.vercel.app"
+    }
+  ],
+  "paths": {
+    "/relay": {
+      "post": {
+        "operationId": "sendRelayCommand",
+        "summary": "Send command to Lex",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "example": "message"
+                  },
+                  "payload": {
+                    "type": "string",
+                    "example": "Lex says: Plugin-triggered command."
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Command accepted"
+          }
+        }
+      }
+    }
+  }
+}
