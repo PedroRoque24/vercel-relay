@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Lex Relay",
+  "name_for_model": "lexRelay",
+  "description_for_human": "Relay commands to Lex.",
+  "description_for_model": "Plugin for relaying commands to Lex via the /relay endpoint.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://vercel-relay-six.vercel.app/openapi.json"
+  },
+  "logo_url": "https://vercel-relay-six.vercel.app/logo.png",
+  "contact_email": "support@lexrelay.com",
+  "legal_info_url": "https://vercel-relay-six.vercel.app/legal"
+}
